@@ -1,0 +1,53 @@
+.contact {
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.5s ease-in-out;
+  flex-direction: column;
+}
+
+.closingbar {
+  width: 100%;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.closing {
+  color: var(--maincolor);
+  font-size: 2em;
+  padding-inline: 3%;
+}
+
+.closing:hover {
+  rotate: 90deg;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+.concontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 93%;
+  width: 100%;
+}
+
+.conbutton {
+  background-color: var(--maincolor);
+  width: 150px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.conbutton:hover {
+  cursor: pointer;
+}

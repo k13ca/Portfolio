@@ -1,0 +1,85 @@
+.secondbox {
+  background: linear-gradient(
+    var(--background-color1),
+    var(--background-color2)
+  );
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.stextbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  padding: 20%;
+  box-sizing: border-box;
+  z-index: 4;
+}
+
+.leftq {
+  align-self: baseline;
+  rotate: -15deg;
+  margin: 20px;
+  transition-duration: 2s;
+}
+
+.rightq {
+  align-self: flex-end;
+  rotate: 10deg;
+  margin: 20px;
+  transition-duration: 2s;
+}
+
+.akapity {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--maincolor);
+  font-family: "IM Fell Great Primer SC", serif;
+  font-size: 5em;
+  margin: 0em;
+}
+
+.akapity.dark {
+  color: var(--maincolor);
+  font-family: "IM Fell Great Primer SC", serif;
+  font-size: 5em;
+  margin: 0em;
+}
+
+.secondbox:hover .leftq {
+  rotate: -30deg;
+  transition-duration: 2s;
+}
+
+.secondbox:hover .rightq {
+  rotate: 25deg;
+  transition-duration: 2s;
+}
+
+.secondbox:hover .akapity {
+  filter: drop-shadow(0 0 20px var(--maincolor));
+  transition-duration: 2s;
+}
+
+@media screen and (max-width: 768px) {
+  .stextbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 70vh;
+    padding: 5%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .akapity {
+    font-size: 3em;
+  }
+}

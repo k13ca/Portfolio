@@ -1,0 +1,25 @@
+.thirdbox {
+  background: linear-gradient(
+    var(--background-color2),
+    var(--background-color3)
+  );
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.thskills {
+  display: flex;
+  height: 90%;
+  padding-inline: 25%;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+@media screen and (max-width: 600px) {
+  .thskills {
+    padding-inline: 5%;
+  }
+}

@@ -1,0 +1,41 @@
+.skillsicons {
+  margin: 4px;
+  width: 70px;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  /* filter: sepia(100%) hue-rotate(150deg) saturate(100%)  ; */
+}
+
+.skillsicons:hover {
+  width: 90px;
+  filter: drop-shadow(0px 0px 40px var(--maincolor));
+  cursor: pointer;
+}
+
+.popup {
+  width: 160px;
+  height: 100px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  border-width: 2px;
+  border-color: var(--maincolor);
+  border-style: solid;
+  padding: 8px 0;
+  position: absolute;
+  bottom: 105%;
+
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .skillsicons {
+    margin: 2px;
+    width: 50px;
+  }
+
+  .skillsicons:hover {
+    width: 70px;
+  }
+}

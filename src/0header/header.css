@@ -1,0 +1,180 @@
+.firstbox {
+  display: flex;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse,
+    var(--backgroundradiant) 5%,
+    var(--background-color1) 40%
+  );
+}
+
+.firstbox:hover {
+  background: radial-gradient(
+    ellipse,
+    var(--backgroundradiant) 5%,
+    var(--background-color1) 70%
+  );
+}
+
+.bganimation {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 4;
+}
+
+.topbar {
+  height: 15%;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding-inline: 10%;
+  /* padding-inline:  10%;
+          box-sizing: border-box; */
+}
+
+.topbarcontent {
+  width: 9.5vw;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.schemebutton {
+  color: var(--maincolor);
+  font-size: 1.5em;
+  margin-inline: 1em;
+}
+
+.schemebutton:hover {
+  rotate: 360deg;
+  transition-duration: 1s;
+}
+
+.fcontent {
+  display: flex;
+  flex-direction: row;
+  height: 85%;
+  padding-inline: 10%;
+}
+
+.fheader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80vw;
+  padding-top: 6em;
+  padding-left: 2.5em;
+}
+
+/* .fheader:hover h1 {
+              font-size: 5.5em;
+              transition-duration: 2s;
+            } */
+
+.fheader h2 {
+  display: flex;
+}
+
+.contactbutton {
+  backdrop-filter: blur(3px);
+  background: rgba(255, 255, 255, 0.1);
+  height: 50px;
+  width: 470px;
+  border-radius: 20px;
+  margin-block: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid var(--maincolor);
+}
+
+.contactbutton h5 {
+  color: var(--sccolor);
+}
+
+.contactbutton:hover {
+  outline: 2px solid var(--maincolor);
+  cursor: pointer;
+}
+
+.fmenu {
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6em;
+}
+
+.fmenu h5 {
+  margin: 0.5em;
+}
+
+@media screen and (max-width: 1024px) {
+  .fcontent {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding-inline: 0;
+  }
+
+  .fheader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 95%;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .fmenu {
+    width: 100vw;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .topbarcontent {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactbutton {
+    height: 40px;
+    width: 430px;
+  }
+  .topbar {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .contactbutton {
+    height: 40px;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .contactbutton {
+    height: 30px;
+    width: 200px;
+  }
+}
