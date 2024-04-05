@@ -17,6 +17,7 @@
 }
 
 .gallery {
+  position: relative;
   align-self: center;
   width: 100%;
   display: flex;
@@ -32,9 +33,11 @@
 .column {
   flex: 15%;
   max-width: 15%;
+  z-index: 4;
 }
 
 .column img {
+  z-index: 4;
   margin-top: 8px;
   margin-bottom: 20px;
   vertical-align: middle;

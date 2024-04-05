@@ -31,9 +31,9 @@ function Header() {
           <div className="topbar">
             <div className="topbarcontent">
               {mode === "dark" ? (
-                <ImSun className="schemebutton" onClick={changeMode} />
-              ) : (
                 <LuMoonStar className="schemebutton" onClick={changeMode} />
+              ) : (
+                <ImSun className="schemebutton" onClick={changeMode} />
               )}
             </div>
           </div>
@@ -52,16 +52,16 @@ function Header() {
 
             <div className="fmenu">
               <a href="#caption">
-                <h5>About&nbsp;Me</h5>
+                <h5>about&nbsp;me</h5>
               </a>
               <a href="#skills">
-                <h5>Skills</h5>
+                <h5>skills</h5>
               </a>
               <a href="#projects">
-                <h5>Projects</h5>
+                <h5>projects</h5>
               </a>
               <a href="#gallery">
-                <h5>Gallery</h5>
+                <h5>gallery</h5>
               </a>
             </div>
           </div>

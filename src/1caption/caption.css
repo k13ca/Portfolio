@@ -17,10 +17,12 @@
   padding: 20%;
   box-sizing: border-box;
   z-index: 4;
+  position: relative;
 }
 
 .leftq {
-  align-self: baseline;
+  align-self: flex-start;
+  top: 50px;
   rotate: -15deg;
   margin: 20px;
   transition-duration: 2s;
@@ -28,17 +30,19 @@
 
 .rightq {
   align-self: flex-end;
+  top: 30px;
   rotate: 10deg;
   margin: 20px;
   transition-duration: 2s;
 }
 
 .akapity {
-  color: transparent;
+  color: var(--portfolio);
+  /* color: transparent; */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--maincolor);
   font-family: "IM Fell Great Primer SC", serif;
-  font-size: 5em;
+  font-size: 4em;
   margin: 0em;
 }
 
@@ -60,7 +64,7 @@
 }
 
 .secondbox:hover .akapity {
-  filter: drop-shadow(0 0 20px var(--maincolor));
+  filter: drop-shadow(0 0 20px var(--glow));
   transition-duration: 2s;
 }
 

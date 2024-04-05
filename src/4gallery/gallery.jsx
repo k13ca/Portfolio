@@ -1,47 +1,12 @@
 import "../App.css";
 import "../style.css";
-
-import { useEffect, useRef, useState } from "react";
-
-import pjcbg from "../assets/pjc.jpg";
-import p1 from "../assets/listapp1.png";
-import p2 from "../assets/listapp2.png";
-import p3 from "../assets/listapp3.png";
-import p4 from "../assets/listapp4.png";
-import p5 from "../assets/listapp5.png";
-import html from "../assets/html.svg.png";
-import css from "../assets/css.svg.png";
-import photoshop from "../assets/photoshop.svg.png";
-import react from "../assets/reactnative.png";
-import figma from "../assets/figma.svg.png";
+import { useState } from "react";
 import GalleryView from "./galleryview";
-
 import Title from "../title";
-
+import { gallery } from "../consts/consts";
 function Gallery() {
   const [showPhoto, setShowPhoto] = useState(false);
   const [currentPhoto, setCurrentPhoto] = useState(null);
-
-  const gallery = [
-    pjcbg,
-    p1,
-    html,
-    pjcbg,
-    p3,
-    pjcbg,
-    p4,
-    pjcbg,
-    pjcbg,
-    p5,
-    figma,
-    react,
-    photoshop,
-    pjcbg,
-    p5,
-    pjcbg,
-    css,
-    p2,
-  ];
 
   const dividedArrayIntoColumns = (array) => {
     const dividedArray = [];
@@ -106,6 +71,7 @@ function Gallery() {
 
         </div> */}
         <div className="gallery">
+          <div className="obj3"></div>
           {galleryOutput.map((column, index) => (
             <div key={index} class="column">
               {column.map((element, innerIndex) => (

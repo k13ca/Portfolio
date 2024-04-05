@@ -25,6 +25,7 @@ const SkillsItem = ({ item, index, isSelected, onClick, name, stars }) => {
         key={index}
         src={item.icon}
         className="skillsicons"
+        id="skillsicons"
       ></img>
     </div>
   );

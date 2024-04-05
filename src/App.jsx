@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./App.css";
 import "./style.css";
 import "./0header/header.css";
@@ -27,25 +27,41 @@ import Contact from "./5contact/contact";
 function App() {
   const [count, setCount] = useState(0);
 
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      { rootMargin: "-300px", delay: 50 }
+    );
+    console.log(isIntersecting);
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, [isIntersecting]);
+
+  useEffect(() => {
+    if (isIntersecting) {
+      //ref.current.style.animation = 'fadein 3s ease-in'
+      //document.getElementById("skillsicons").style.animation = "fadein 1s ease-in";
+      document.querySelectorAll(".skillsicons").forEach((el) => {
+        el.style.animation = "fadein 1s ";
+        el.style.display = "block";
+      });
+    } else {
+      document.querySelectorAll(".skillsicons").forEach((el) => {
+        el.style.animation = "fadeout 1s ";
+        el.style.display = "none";
+      });
+    }
+  }, [isIntersecting]);
+
   return (
     <>
-      {/* <div className='background'> 
-<svg xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-          <feBlend in="SourceGraphic" in2="goo" />
-        </filter>
-      </defs>
-    </svg>
-    <div className='obj1'></div>
-    <div className='obj2'></div>
-    <div className='obj3'></div>
-    <div className='obj4'></div>
-</div>   */}
-
-      <div className="noise">
+      {/* <div className="noise">
         <svg width="100%" height="100%">
           <filter id="noisesvg">
             <feTurbulence
@@ -76,26 +92,32 @@ function App() {
             </feSpecularLighting>
           </filter>
         </svg>
+      </div> */}
+
+      <div className="noise">
+        <svg>
+          <filter id="noisesvg">
+            <feTurbulence type="turbulance" baseFrequency={5} />
+          </filter>
+        </svg>
       </div>
 
-      <div className="obj1"></div>
+      {/* <div className="noise2">
+        <svg>
+          <filter id="noisesvg">
+            <feTurbulence type="turbulance" baseFrequency={5} />
+          </filter>
+        </svg>
+      </div> */}
+
+      {/* <div className="obj1"></div> */}
 
       <div className="scroll">
         <Header></Header>
         <Caption></Caption>
-        <Skills></Skills>
+        <Skills ref={ref}></Skills>
         <Pjc></Pjc>
         <Gallery></Gallery>
-
-        {/* {projects.map((item, index)=>
-     <Projects
-       title={item.title}
-       description={item.description}
-       photos={item.photos}
-       key={index}/>
-   
-     )
- }  */}
       </div>
     </>
   );

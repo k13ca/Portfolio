@@ -1,49 +1,31 @@
 import "../App.css";
 import "../style.css";
 
-import html from "../assets/html.svg.png";
-import css from "../assets/css.svg.png";
-import photoshop from "../assets/photoshop.svg.png";
-import react from "../assets/reactnative.png";
-import figma from "../assets/figma.svg.png";
 import Title from "../title";
 import SkillsItem from "./skillsItem";
-import { useState } from "react";
-function Skills() {
+import { forwardRef, useState } from "react";
+import { skills } from "../consts/consts";
+const Skills = forwardRef(function Skills(props, ref) {
   const [selectedSkill, setSelectedSkill] = useState(null);
 
   const handleSkillClick = (index) => {
     setSelectedSkill(index === selectedSkill ? null : index);
   };
 
-  const skills = [
-    { name: "Photoshop", icon: photoshop, stars: "4" },
-    { name: "FigmaL", icon: figma, stars: "3" },
-    { name: "HTML", icon: html, stars: "4" },
-    { name: "CSS", icon: css, stars: "4" },
-    { name: "React", icon: react, stars: "1" },
-    { name: "React Native", icon: react, stars: "3" },
-
-    { name: "Photoshop", icon: photoshop },
-    { name: "FigmaL", icon: figma },
-    { name: "HTML", icon: html },
-    { name: "CSS", icon: css },
-    { name: "React", icon: react },
-    { name: "React Native", icon: react },
-  ];
-
   return (
     <>
-      <section className="thirdbox" id="skills">
+      <section className="thirdbox" id="skills" ref={ref}>
         <Title title={"Skills"}></Title>
 
-        <div className="thskills">
+        <div id="thskills" className="thskills">
+          <div className="obj2"></div>
+
           {skills.map((item, index) => (
             <SkillsItem
               item={item}
               index={index}
               key={index}
-              onClick={() => handleSkillClick(index)}
+              // onClick={() => handleSkillClick(index)}
               isSelected={index === selectedSkill}
             />
           ))}
@@ -51,6 +33,6 @@ function Skills() {
       </section>
     </>
   );
-}
+});
 
 export default Skills;

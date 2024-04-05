@@ -43,6 +43,7 @@
   border-radius: 20px;
   backdrop-filter: blur(3px);
   outline: 1px solid var(--maincolor);
+  background-color: rgb(245, 245, 245, 0.05);
 }
 
 .fproject:hover {

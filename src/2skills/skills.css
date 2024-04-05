@@ -16,6 +16,16 @@
   align-content: center;
   justify-content: center;
   z-index: 4;
+  position: relative;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 @media screen and (max-width: 600px) {

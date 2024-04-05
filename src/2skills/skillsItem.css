@@ -5,11 +5,12 @@
   aspect-ratio: 1/1;
   object-fit: contain;
   /* filter: sepia(100%) hue-rotate(150deg) saturate(100%)  ; */
+  display: none;
 }
 
 .skillsicons:hover {
   width: 90px;
-  filter: drop-shadow(0px 0px 40px var(--maincolor));
+  filter: drop-shadow(0px 0px 40px var(--glow));
   cursor: pointer;
 }
 

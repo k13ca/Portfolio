@@ -2,84 +2,12 @@ import "../App.css";
 import "../style.css";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
-import { useEffect, useRef, useState } from "react";
-import mobileapp from "../assets/mobileappproject.svg";
-import mobileappview from "../assets/mobileappview.svg";
-import listapp2 from "../assets/listapp2.png";
-import listapp3 from "../assets/listapp3.png";
-import listapp4 from "../assets/listapp4.png";
-import listapp5 from "../assets/listapp5.png";
-import listapp6 from "../assets/listapp6.png";
-import listapp7 from "../assets/listapp7.png";
-import jwproject from "../assets/jwproject.png";
+import { useRef, useState } from "react";
+import { projects } from "../consts/consts";
 import Title from "../title";
 import ProjectView from "./pjcview";
 
 function Pjc({ title }) {
-  const projects = [
-    {
-      title: `Mobile Application`,
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      tools: "React Native | JavaScript | SQL",
-      mainphoto: mobileapp,
-      viewphoto: mobileappview,
-      photos: [
-        { name: "listapp2", icon: listapp2 },
-        { name: "listapp3", icon: listapp3 },
-        { name: "listapp4", icon: listapp4 },
-        { name: "listapp5", icon: listapp5 },
-        { name: "listapp6", icon: listapp6 },
-        { name: "listapp7", icon: listapp7 },
-      ],
-    },
-    {
-      title: `Portfolio`,
-      description: "xdddd",
-      tools: "HTML | CSS | React",
-      mainphoto: listapp2,
-      photos: [
-        { name: "listapp1", icon: listapp2 },
-        { name: "listapp2", icon: listapp2 },
-        { name: "listapp3", icon: listapp3 },
-        { name: "listapp4", icon: listapp4 },
-        { name: "listapp5", icon: listapp5 },
-        { name: "listapp6", icon: listapp6 },
-        { name: "listapp7", icon: listapp7 },
-      ],
-    },
-    {
-      title: `Web/Shop Project`,
-      description: "xdddd",
-      tools: "Photoshop | Figma",
-      mainphoto: jwproject,
-      photos: [
-        { name: "listapp1", icon: listapp2 },
-        { name: "listapp2", icon: listapp2 },
-        { name: "listapp3", icon: listapp3 },
-        { name: "listapp4", icon: listapp4 },
-        { name: "listapp5", icon: listapp5 },
-        { name: "listapp6", icon: listapp6 },
-        { name: "listapp7", icon: listapp7 },
-      ],
-    },
-    {
-      title: `app2`,
-      description: "xdddd",
-      tools: "frgthyjukjhgfd",
-      mainphoto: listapp2,
-      photos: [
-        { name: "listapp1", icon: listapp2 },
-        { name: "listapp2", icon: listapp2 },
-        { name: "listapp3", icon: listapp3 },
-        { name: "listapp4", icon: listapp4 },
-        { name: "listapp5", icon: listapp5 },
-        { name: "listapp6", icon: listapp6 },
-        { name: "listapp7", icon: listapp7 },
-      ],
-    },
-  ];
-
   const [showProject, setShowProject] = useState(false);
   const [currentProject, setCurrentProject] = useState(null);
   const refs = projects.map(() => useRef(null));

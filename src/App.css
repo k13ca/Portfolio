@@ -28,13 +28,13 @@
   position: absolute;
   background: radial-gradient(
     circle at 50% 50%,
-    rgb(98, 149, 174) 17%,
-    rgba(198, 253, 255, 1) 37%,
+    rgb(98, 149, 174, 0.8) 17%,
+    rgba(198, 253, 255, 0.8) 37%,
     rgba(156, 39, 176, 0) 58%
   );
   mix-blend-mode: hard-light;
 
-  z-index: 2;
+  z-index: 0;
   opacity: 1;
   overflow-x: auto;
 
@@ -43,16 +43,74 @@
   top: calc(50% - var(--circlesize) / 2);
   left: calc(50% - var(--circlesize) / 2);
 
-  /*
-            transform-origin: center center; 
-        animation: moveVertical 30s ease infinite; 
-          filter: url(#goo) blur(50px);*/
+  transform-origin: calc(50% + 200px);
+  animation: moveInCircle 30s reverse infinite;
+  filter: url(#goo) blur(50px);
 
-  filter: blur(80px);
+  filter: blur(100px);
 }
 
 .obj2 {
-  z-index: 2;
+  z-index: 0;
+  position: absolute;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(147, 133, 181) 10%,
+    rgb(178, 171, 195) 20%,
+    rgba(156, 39, 176, 0) 40%
+  );
+  mix-blend-mode: hard-light;
+
+  opacity: 1;
+
+  width: 100%;
+  height: 100%;
+  top: calc(50% - var(--circlesize) / 2);
+  left: calc(50% - var(--circlesize) / 2);
+
+  transform-origin: calc(50% - 200px);
+  animation: moveInCircle 40s linear infinite;
+
+  filter: blur(100px);
+}
+
+.obj3 {
+  z-index: 1;
+  position: absolute;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(218, 129, 101, 0.5) 17%,
+    rgba(203, 157, 144, 0.5) 37%,
+    rgba(255, 255, 255, 0) 58%
+  );
+  mix-blend-mode: hard-light;
+
+  opacity: 1;
+
+  width: 90%;
+  height: 90%;
+  top: calc(50% - var(--circle-size) / 2 + 200px);
+  left: calc(50% - var(--circle-size) / 2 - 500px);
+
+  transform-origin: calc(50% + 400px);
+  animation: moveInCircle 40s linear infinite;
+  filter: blur(100px);
+}
+
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .obj4 {
+  z-index: 0;
   position: absolute;
   background: radial-gradient(
     circle at 50% 50%,
@@ -71,87 +129,32 @@
 
   transform-origin: calc(50% - 400px);
   animation: moveInCircle 20s reverse infinite;
+} */
+
+/*
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
 }
 
-.obj3 {
-  z-index: 2;
-  position: absolute;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgb(79, 93, 117, 0.5) 17%,
-    rgb(142, 148, 158, 0.5) 37%,
-    rgba(255, 255, 255, 0) 58%
-  );
-  mix-blend-mode: hard-light;
-
-  opacity: 1;
-
-  width: 60%;
-  height: 60%;
-  top: calc(50% - var(--circle-size) / 2 + 200px);
-  left: calc(50% - var(--circle-size) / 2 - 500px);
-
-  transform-origin: calc(50% + 400px);
-  animation: moveInCircle 40s linear infinite;
-}
-
-.obj4 {
-  z-index: 2;
-  position: absolute;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgb(147, 133, 181) 17%,
-    rgb(178, 171, 195) 37%,
-    rgba(156, 39, 176, 0) 50%
-  );
-  mix-blend-mode: hard-light;
-
-  opacity: 1;
-
-  width: var(--circlesize);
-  height: var(--circlesize);
-  top: calc(50% - var(--circlesize) / 2);
-  left: calc(50% - var(--circlesize) / 2);
-
-  transform-origin: calc(50% - 200px);
-  animation: moveHorizontal 40s ease infinite;
-}
-
-/* @keyframes moveInCircle {
-                  0% {
-                    transform: rotate(0deg);
-                  }
-                  50% {
-                    transform: rotate(180deg);
-                  }
-                  100% {
-                    transform: rotate(360deg);
-                  }
-                }
-                
-                @keyframes moveVertical {
-                  0% {
-                    transform: translateY(-50%);
-                  }
-                  50% {
-                    transform: translateY(50%);
-                  }
-                  100% {
-                    transform: translateY(-50%);
-                  }
-                }
-                
-                @keyframes moveHorizontal {
-                  0% {
-                    transform: translateX(-50%) translateY(-10%);
-                  }
-                  50% {
-                    transform: translateX(50%) translateY(10%);
-                  }
-                  100% {
-                    transform: translateX(-50%) translateY(-10%);
-                  }
-                }   */
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+} */
 
 .noise {
   position: absolute;
@@ -159,6 +162,25 @@
   width: 100%;
   height: 100dvh;
   filter: url(#noisesvg);
+}
+
+.noise2 {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100dvh;
+  transform: translateX(3px);
+  filter: url(#noisesvg);
+  animation: noise 0.2s infinite;
+}
+
+@keyframes noise {
+  from {
+    display: none;
+  }
+  to {
+    display: initial;
+  }
 }
 
 .boxtitle {
