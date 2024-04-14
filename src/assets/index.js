@@ -4,7 +4,7 @@ import photoshop from "./photoshop.svg.png";
 import react from "./reactnative.png";
 import figma from "./figma.svg.png";
 import lightroom from "./lightroom.svg.png";
-import illustrator from "./illustrator.png";
+import illustrator from "./Illustrator.png";
 import js from "./js.png";
 import mobileapp from "./mobileappproject.svg";
 import mobileappview from "./mobileappview.svg";
