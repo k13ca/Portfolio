@@ -5,6 +5,7 @@ import Title from "../title";
 import SkillsItem from "./skillsItem";
 import { forwardRef, useState } from "react";
 import { skills } from "../consts/consts";
+
 const Skills = forwardRef(function Skills(props, ref) {
   const [selectedSkill, setSelectedSkill] = useState(null);
 

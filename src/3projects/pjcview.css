@@ -38,8 +38,6 @@
 }
 
 .viewcontent h5 {
-  /* display: inline-flex;
-      background-color: rgb(255, 255, 255); */
   filter: drop-shadow(0px 0px 10px var(--glasscolortext));
 }
 

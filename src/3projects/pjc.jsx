@@ -1,40 +1,15 @@
 import "../App.css";
 import "../style.css";
-import { MdArrowBackIosNew } from "react-icons/md";
-import { MdArrowForwardIos } from "react-icons/md";
-import { useRef, useState } from "react";
+// import { MdArrowBackIosNew } from "react-icons/md";
+// import { MdArrowForwardIos } from "react-icons/md";
+import { useRef, useState, forwardRef } from "react";
 import { projects } from "../consts/consts";
 import Title from "../title";
 import ProjectView from "./pjcview";
 
-function Pjc({ title }) {
+const Pjc = forwardRef(function Pjc({ title }, ref) {
   const [showProject, setShowProject] = useState(false);
   const [currentProject, setCurrentProject] = useState(null);
-  const refs = projects.map(() => useRef(null));
-  const [idx, setIdx] = useState(0);
-  const ref = useRef(null);
-  const fhContentRef = useRef();
-
-  const changeSlideIndex = (type) => {
-    switch (type) {
-      case "increment":
-        setIdx((prev) => prev + 1);
-        break;
-      case "decrement":
-        setIdx((prev) => prev + 1);
-        break;
-    }
-    fhContentRef.current.scrollIntoView();
-    const timer = setTimeout(() => {
-      refs[idx].current.scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-        block: "nearest",
-      });
-    }, 300);
-    return clearTimeout(timer);
-  };
-
   return (
     <>
       {showProject && (
@@ -46,19 +21,18 @@ function Pjc({ title }) {
         ></ProjectView>
       )}
 
-      <section className="fourthbox" id="projects">
+      <section className="fourthbox" id="projects" ref={ref}>
         <Title title={"Projects"}></Title>
 
-        <div className="fthcontent" ref={fhContentRef}>
-          <div className="farrow" onClick={() => changeSlideIndex("decrement")}>
+        <div className="fthcontent">
+          {/* <div className="farrow" onClick={() => changeSlideIndex("decrement")}>
             <MdArrowBackIosNew />
-          </div>
+          </div> */}
 
-          <div className="fprojects" ref={ref}>
+          <div className="fprojects">
             {projects.map((item, idx) => (
               <div
                 key={idx}
-                ref={refs[idx]}
                 className="fproject"
                 onClick={() => {
                   setShowProject(true);
@@ -77,13 +51,13 @@ function Pjc({ title }) {
             ))}
           </div>
 
-          <div className="farrow" onClick={() => changeSlideIndex("increment")}>
+          {/* <div className="farrow" onClick={() => changeSlideIndex("increment")}>
             <MdArrowForwardIos />
-          </div>
+          </div> */}
         </div>
       </section>
     </>
   );
-}
+});
 
 export default Pjc;

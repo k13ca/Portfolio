@@ -22,7 +22,6 @@ html {
 
 html.dark {
   scroll-behavior: smooth !important;
-  /* --backgroundradiant: rgba(79, 93, 117,1); */
   --backgroundradiant: rgb(25, 97, 169, 0.8);
   --background-color1: rgba(248, 249, 250, 1);
   --background-color2: #e9ecef;
@@ -35,10 +34,7 @@ html.dark {
   --glasscolor: rgba(255, 255, 255, 0.202);
   --glasscolortext: rgba(255, 255, 255);
   --glow: rgb(120, 171, 215);
-  /* --photofilter: sepia(100%) hue-rotate(150deg) saturate(100%); */
 }
-
-/*   --maincolor: #495057;  */
 
 section {
   height: 60vh;

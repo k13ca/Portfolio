@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import "../App.css";
 import "../style.css";
 import { ImSun } from "react-icons/im";
@@ -6,7 +6,7 @@ import { LuMoonStar } from "react-icons/lu";
 
 import Contact from "../5contact/contact";
 
-function Header() {
+const Header = forwardRef(function Header(props, ref) {
   const [count, setCount] = useState(0);
   const [mode, setMode] = useState("light");
 
@@ -26,7 +26,7 @@ function Header() {
     <>
       <Contact isShown={showContact} close={setShowContact}></Contact>
 
-      <section className="firstbox">
+      <section className="firstbox" id="top" ref={ref}>
         <div className="bganimation">
           <div className="topbar">
             <div className="topbarcontent">
@@ -69,6 +69,6 @@ function Header() {
       </section>
     </>
   );
-}
+});
 
 export default Header;

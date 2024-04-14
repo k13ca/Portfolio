@@ -33,21 +33,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   height: 93%;
   width: 100%;
 }
 
-.conbutton {
-  background-color: var(--maincolor);
-  width: 150px;
-  height: 100px;
-  margin: 10px;
-  border-radius: 20px;
+.concontent a:hover {
+  text-shadow: 0px 0px 10px var(--glow);
+  font-size: 1em;
+}
+
+.concontent:hover {
+  text-shadow: 0px 0px 10px var(--glow);
+}
+
+.conblock {
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.conbutton {
+  backdrop-filter: blur(3px);
+  background: rgba(255, 255, 255, 0.1);
+  height: 100px;
+  width: 200px;
+  margin: 5px;
+  border-radius: 20px;
+  margin-block: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid var(--maincolor);
 }
 
 .conbutton:hover {
+  outline: 2px solid var(--maincolor);
   cursor: pointer;
 }

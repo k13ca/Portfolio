@@ -14,7 +14,8 @@
   justify-content: center;
   width: 100vw;
   height: 100%;
-  padding: 20%;
+  padding-inline: 20%;
+  padding-block: 15em;
   box-sizing: border-box;
   z-index: 4;
   position: relative;
@@ -77,6 +78,7 @@
     width: 100vw;
     height: 70vh;
     padding: 5%;
+    padding-block: 40%;
     box-sizing: border-box;
     z-index: 3;
   }

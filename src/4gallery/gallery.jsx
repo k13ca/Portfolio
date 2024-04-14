@@ -1,10 +1,11 @@
 import "../App.css";
 import "../style.css";
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import GalleryView from "./galleryview";
 import Title from "../title";
 import { gallery } from "../consts/consts";
-function Gallery() {
+
+const Gallery = forwardRef(function Gallery(props, ref) {
   const [showPhoto, setShowPhoto] = useState(false);
   const [currentPhoto, setCurrentPhoto] = useState(null);
 
@@ -18,11 +19,9 @@ function Gallery() {
   };
 
   const galleryOutput = dividedArrayIntoColumns(gallery);
+
   return (
     <>
-      {/* 
-    <div className='photoviev'></div> */}
-
       {showPhoto && (
         <GalleryView
           isShown={showPhoto}
@@ -31,58 +30,31 @@ function Gallery() {
         ></GalleryView>
       )}
 
-      <section className="gallerybox" id="gallery">
+      <section className="gallerybox" id="gallery" ref={ref}>
         <Title title={"Gallery"}></Title>
-        {/* <div className='gallery'>
-            <div class="column">
-                <img src={pjcbg}  onClick={() => {setShowPhoto(true); setCurrentPhoto(pjcbg)}}></img>
-                <img src={p4}></img>
-                <img src={photoshop}></img>
 
-             
-            </div>
-            <div class="column">
-                <img src={p1} onClick={() => {setShowPhoto(true); setCurrentPhoto(p1)}}></img>
-                <img src={pjcbg}></img>
-                <img src={pjcbg}></img>
-           
-            </div>
-            <div class="column">
-                <img src={html} onClick={() => {setShowPhoto(true); setCurrentPhoto(html)}}></img>
-                <img src={pjcbg}></img>
-                <img src={p5}></img>
-         
-            </div>
-            <div class="column">
-                <img src={pjcbg}></img>
-                <img src={p5}></img>
-                <img src={pjcbg}></img>
-            </div>
-            <div class="column">
-                <img src={p3}></img>
-                <img src={figma}></img>
-                <img src={css}></img>
-            </div>
-            <div class="column">
-                <img src={pjcbg}></img>
-                <img src={react}></img>
-                <img src={p2}></img>
-            </div>
-
-        </div> */}
         <div className="gallery">
           <div className="obj3"></div>
           {galleryOutput.map((column, index) => (
             <div key={index} class="column">
               {column.map((element, innerIndex) => (
-                <img key={innerIndex} src={element} />
+                <img
+                  onClick={() => {
+                    setShowPhoto(true);
+                    setCurrentPhoto(element);
+                  }}
+                  key={innerIndex}
+                  src={element}
+                />
               ))}
             </div>
           ))}
+          <div className="footer">
+            <h5></h5>
+          </div>
         </div>
       </section>
     </>
   );
-}
-
+});
 export default Gallery;
