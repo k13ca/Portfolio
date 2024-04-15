@@ -8,7 +8,7 @@ function Contact({ isShown, close }) {
   const topProperty = isShown ? "0%" : "-120%";
 
   function copymail() {
-    const email = "k13ca@o2.pl";
+    const email = "k13cacontact@yahoo.com";
     navigator.clipboard.writeText(email);
   }
 
