@@ -97,7 +97,7 @@
   filter: blur(100px);
 }
 
-/* @keyframes moveInCircle {
+@keyframes moveInCircle {
   0% {
     transform: rotate(0deg);
   }
@@ -107,29 +107,7 @@
   100% {
     transform: rotate(360deg);
   }
-} */
-
-/* .obj4 {
-  z-index: 0;
-  position: absolute;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgb(185, 223, 241) 17%,
-    rgba(198, 253, 255, 1) 37%,
-    rgba(156, 39, 176, 0) 58%
-  );
-  mix-blend-mode: hard-light;
-
-  opacity: 1;
-
-  width: var(--circlesize);
-  height: var(--circlesize);
-  top: calc(50% - var(--circlesize) / 2);
-  left: calc(50% - var(--circlesize) / 2);
-
-  transform-origin: calc(50% - 400px);
-  animation: moveInCircle 20s reverse infinite;
-} */
+}
 
 /*
 @keyframes moveVertical {

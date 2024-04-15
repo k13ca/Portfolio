@@ -11,13 +11,17 @@ function Caption() {
             <span className="akapity">"</span>
           </div>
           <h6>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            My name is Klaudia, I am an IT engineer and currently studying
+            tourism. My experience includes working with various graphic
+            programs since early school for my own use, which translates into
+            proficiency in their use, ability to create graphics, photo editing
+            and drawing. I'm good at Photoshop. Presently, I am improving my
+            skills in working with Figma and developing in the field of UX/UI.
+            My profession is closely related to creating websites and mobile
+            applications. Currently, I have little experience in web
+            technologies such as: React, JavaScript, HTML, CSS and React Native
+            or MySQL. I want to gain commercial experience in any field. I care
+            about developing and improving the above-mentioned skills.
           </h6>
           <div className="rightq">
             <span className="akapity">"</span>
