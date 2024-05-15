@@ -6,10 +6,13 @@ import figma from "./figma.svg.png";
 import lightroom from "./lightroom.svg.png";
 import illustrator from "./Illustrator.png";
 import js from "./js.png";
+import webflow from "./webflow.png";
+import tailwindcss from "./tailwindcss.jpeg";
 import mobileapp from "./mobileappproject.svg";
 import mobileappview from "./mobileappview.svg";
 import portfolio from "./portfolioproject.png";
 import portfolioview from "./portfolioview.svg";
+import technoproject from "./technoproject.png";
 import jwproject from "./jwproject.png";
 import jwview from "./jwview.svg";
 import etykieta1 from "./etykietaredwine.svg";
@@ -38,10 +41,13 @@ export {
   lightroom,
   illustrator,
   js,
+  webflow,
+  tailwindcss,
   mobileapp,
   mobileappview,
   portfolio,
   portfolioview,
+  technoproject,
   jwview,
   jwproject,
   etykieta1,

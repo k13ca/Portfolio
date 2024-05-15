@@ -5,6 +5,22 @@
 
 html {
   scroll-behavior: smooth !important;
+  --backgroundradiant: rgb(25, 97, 169, 0.8);
+  --background-color1: rgba(248, 249, 250, 1);
+  --background-color2: #e9ecef;
+  --background-color3: #dee2e6;
+  --maincolor: rgb(27, 42, 65);
+  --sccolor: #6c757d;
+  --grain: #d0021b;
+  --circlesize: 50%;
+  --portfolio: transparent;
+  --glasscolor: rgba(255, 255, 255, 0.202);
+  --glasscolortext: rgba(255, 255, 255);
+  --glow: rgb(120, 171, 215);
+}
+
+html.dark {
+  scroll-behavior: smooth !important;
   --backgroundradiant: rgba(25, 25, 25, 1);
   --background-color1: rgba(0, 0, 0, 1);
   --background-color2: #191919;
@@ -18,22 +34,6 @@ html {
   --glasscolor: rgba(22, 22, 22, 0.4);
   --glasscolortext: rgb(0, 0, 0);
   --glow: whitesmoke;
-}
-
-html.dark {
-  scroll-behavior: smooth !important;
-  --backgroundradiant: rgb(25, 97, 169, 0.8);
-  --background-color1: rgba(248, 249, 250, 1);
-  --background-color2: #e9ecef;
-  --background-color3: #dee2e6;
-  --maincolor: rgb(27, 42, 65);
-  --sccolor: #6c757d;
-  --grain: #d0021b;
-  --circlesize: 50%;
-  --portfolio: transparent;
-  --glasscolor: rgba(255, 255, 255, 0.202);
-  --glasscolortext: rgba(255, 255, 255);
-  --glow: rgb(120, 171, 215);
 }
 
 section {

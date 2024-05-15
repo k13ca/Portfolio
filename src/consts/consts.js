@@ -7,10 +7,13 @@ import {
   lightroom,
   illustrator,
   js,
+  webflow,
+  tailwindcss,
   mobileapp,
   mobileappview,
   portfolio,
   portfolioview,
+  technoproject,
   jwview,
   jwproject,
   etykieta1,
@@ -33,7 +36,8 @@ import {
 
 export const skills = [
   { name: "Photoshop", icon: photoshop, stars: "4" },
-  { name: "FigmaL", icon: figma, stars: "3" },
+  { name: "Webflow", icon: webflow, stars: "4" },
+  { name: "Figma", icon: figma, stars: "3" },
   { name: "HTML", icon: html, stars: "4" },
   { name: "CSS", icon: css, stars: "4" },
   { name: "React", icon: react, stars: "1" },
@@ -41,6 +45,7 @@ export const skills = [
   { name: "Lightroom", icon: lightroom, stars: "3" },
   { name: "Illustrator", icon: illustrator, stars: "3" },
   { name: "Javascript", icon: js, stars: "3" },
+  { name: "Tailwindcss", icon: tailwindcss, stars: "3" },
 ];
 
 export const projects = [
@@ -54,12 +59,11 @@ export const projects = [
     photos: [],
   },
   {
-    title: `Portfolio`,
-    description:
-      "A personal portfolio describing myself and the graphic experience I have acquired over the years. Apart from design, this project also demonstrates the ability to use web technologies such as HTML, CSS and React.",
-    tools: "HTML | CSS | React",
-    mainphoto: portfolio,
-    viewphoto: portfolioview,
+    title: `Techno`,
+    description: "A random project generator idea in progress",
+    tools: "HTML | CSS | React | Figma | Photoshop",
+    mainphoto: technoproject,
+    viewphoto: technoproject,
     photos: [],
   },
   {
@@ -69,6 +73,15 @@ export const projects = [
     tools: "Photoshop | Figma",
     mainphoto: jwproject,
     viewphoto: jwview,
+    photos: [],
+  },
+  {
+    title: `Portfolio`,
+    description:
+      "A personal portfolio describing myself and the graphic experience I have acquired over the years. Apart from design, this project also demonstrates the ability to use web technologies such as HTML, CSS and React.",
+    tools: "HTML | CSS | React",
+    mainphoto: portfolio,
+    viewphoto: portfolioview,
     photos: [],
   },
 ];

@@ -30,7 +30,7 @@ const Header = forwardRef(function Header(props, ref) {
         <div className="bganimation">
           <div className="topbar">
             <div className="topbarcontent">
-              {mode === "dark" ? (
+              {mode === "light" ? (
                 <LuMoonStar className="schemebutton" onClick={changeMode} />
               ) : (
                 <ImSun className="schemebutton" onClick={changeMode} />
