@@ -32,6 +32,16 @@ import {
   ma5,
   ma6,
   ma7,
+  sunproject,
+  sunview,
+  product1,
+  product2,
+  product3,
+  sunlogo1,
+  sunlogo2,
+  sunlogo3,
+  housesproject,
+  housesview,
 } from "../assets/index";
 
 export const skills = [
@@ -56,6 +66,22 @@ export const projects = [
     tools: "React Native | JavaScript | SQL",
     mainphoto: mobileapp,
     viewphoto: mobileappview,
+    photos: [],
+  },
+  {
+    title: `Product website`,
+    description: "",
+    tools: "Photoshop | Figma",
+    mainphoto: sunproject,
+    viewphoto: sunview,
+    photos: [],
+  },
+  {
+    title: `Company website`,
+    description: "",
+    tools: "Figma",
+    mainphoto: housesproject,
+    viewphoto: housesview,
     photos: [],
   },
   {
@@ -87,6 +113,12 @@ export const projects = [
 ];
 
 export const gallery = [
+  product1,
+  product2,
+  product3,
+  sunlogo1,
+  sunlogo2,
+  sunlogo3,
   bottle1,
   bottle2,
   bottle3,

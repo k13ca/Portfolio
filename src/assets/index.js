@@ -31,6 +31,16 @@ import ma4 from "./listapp4.png";
 import ma5 from "./listapp5.png";
 import ma6 from "./listapp6.png";
 import ma7 from "./listapp7.png";
+import sunproject from "./sunproject.png";
+import sunview from "./sunview.png";
+import product1 from "./product1.jpg";
+import product2 from "./product2.jpg";
+import product3 from "./product3.jpg";
+import sunlogo1 from "./sunlogo1.png";
+import sunlogo2 from "./sunlogo2.png";
+import sunlogo3 from "./sunlogo3.png";
+import housesproject from "./housesproject.png";
+import housesview from "./housesview.png";
 
 export {
   html,
@@ -66,4 +76,14 @@ export {
   ma5,
   ma6,
   ma7,
+  sunproject,
+  sunview,
+  product1,
+  product2,
+  product3,
+  sunlogo1,
+  sunlogo2,
+  sunlogo3,
+  housesproject,
+  housesview,
 };
